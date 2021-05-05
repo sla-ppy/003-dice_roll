@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <array>
 
 int randGen()
 {
@@ -12,13 +13,13 @@ int randGen()
 }
 
 int main() {
-    const int diceRolls = 9;
+    const int numOfRolls = 9;
 
-    int diceRoll[diceRolls];
+    std::array<int, numOfRolls> diceRolls{0, 0, 0, 0, 0, 0, 0, 0, 0,};
 
-    for (int i = 0; i < diceRolls; ++i) {
-        diceRoll[i] = randGen();
-        std::cout << " " << diceRoll[i];
+    for (auto it = diceRolls.begin(); it != diceRolls.end(); it++) {
+        *it = randGen();
+        std::cout << " " << *it;
     }
 
     return 0;
