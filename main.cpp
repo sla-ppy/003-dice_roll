@@ -16,7 +16,6 @@ int main() {
     bool rollingDice = true;
 
     while (rollingDice) {
-        system("cls");
         // Get sides of dice for rolls
         int diceSideInput;
         std::cout << "Enter the type of dice you'd like to roll:" << std::endl;
@@ -24,6 +23,8 @@ int main() {
 
         const int numOfRolls = 1;
 
+        //TODO: Find a way to solve letting users choose number of rolls while still having access to std::array
+        //std::vector rushes to our aid. find a way to switch to using that instead so numOfRolls can be dynamic
         std::array<int, numOfRolls> diceRolls{};
 
         // Loop through dice rolls
